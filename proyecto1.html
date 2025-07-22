@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Asistente Virtual - Hotel Golden Way</title>
 
   <!-- Estilos base -->
   <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Estilo personalizado -->
   <style>
     html, body {
       height: 100%;
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background: linear-gradient(135deg, #d0e9ff, #f1f9ff);
+      background: linear-gradient(135deg, #d8eefe, #f1f9ff);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -28,7 +28,7 @@
       max-width: 420px;
       max-height: 720px;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       background-color: #ffffff;
     }
@@ -41,11 +41,6 @@
       --n8n-chat-background-color: #f0faff;
       --n8n-chat-text-color: #333;
       --n8n-chat-font-family: 'Nunito', sans-serif;
-    }
-
-    .n8n-chat input[type="text"]::placeholder {
-      color: #777;
-      font-style: italic;
     }
   </style>
 </head>
@@ -88,7 +83,6 @@
 
       createChat({
         mode: 'fullscreen',
-        language: 'es', // 🔥 Idioma por defecto
         webhookUrl: 'https://parise27.app.n8n.cloud/webhook/474cf90b-255d-431e-b45f-1e98bc44154b/chat',
         showWelcomeScreen: false,
         loadPreviousSession: false,
@@ -102,21 +96,14 @@
         allowFileUploads: false,
         allowedFilesMimeTypes: '',
         i18n: {
-          es: {
-            title: "Bienvenido al Hotel Golden Way",
+          en: {
             subtitle: "Soy tu asistente 24/7 a tu disposición",
-            inputPlaceholder: "Escribe tu pregunta...",
-            sendButtonLabel: "Enviar",
-            welcomeScreen: {
-              title: "Bienvenido 👋",
-              subtitle: "¿En qué puedo ayudarte hoy?",
-              buttonText: "Empezar"
-            }
-          }
+            title: "Bienvenido al Hotel Golden Way"
+          },
         },
         initialMessages: [
-          "¡Hola! 👋",
-          "Mi nombre es InfoStay. ¿En qué puedo ayudarte hoy?"
+          "Hola Buenas! 👋",
+          "Mi nombre es InfoStay. ¿En qué te puedo ayudar hoy?"
         ],
       });
     })();
