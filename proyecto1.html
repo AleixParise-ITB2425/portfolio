@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Asistente Virtual - Hotel Golden Way</title>
 
-  <!-- Estilos base -->
+  <!-- Librerías base -->
   <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
-  <!-- Estilo personalizado -->
   <style>
     html, body {
       height: 100%;
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background: linear-gradient(135deg, #d8eefe, #f1f9ff);
+      background: linear-gradient(135deg, #d0e9ff, #f1f9ff);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -27,10 +27,11 @@
       height: 100%;
       max-width: 420px;
       max-height: 720px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
       overflow: hidden;
       background-color: #ffffff;
+      transition: all 0.3s ease;
     }
 
     :root {
@@ -41,6 +42,12 @@
       --n8n-chat-background-color: #f0faff;
       --n8n-chat-text-color: #333;
       --n8n-chat-font-family: 'Nunito', sans-serif;
+    }
+
+    /* Personalización del input */
+    .n8n-chat input[type="text"]::placeholder {
+      color: #888;
+      font-style: italic;
     }
   </style>
 </head>
@@ -96,14 +103,15 @@
         allowFileUploads: false,
         allowedFilesMimeTypes: '',
         i18n: {
-          en: {
+          es: {
             subtitle: "Soy tu asistente 24/7 a tu disposición",
-            title: "Bienvenido al Hotel Golden Way"
-          },
+            title: "Bienvenido al Hotel Golden Way",
+            inputPlaceholder: "Escribe tu pregunta..."
+          }
         },
         initialMessages: [
-          "Hola Buenas! 👋",
-          "Mi nombre es InfoStay. ¿En qué te puedo ayudar hoy?"
+          "¡Hola! 👋",
+          "Mi nombre es InfoStay. ¿En qué puedo ayudarte hoy?"
         ],
       });
     })();
