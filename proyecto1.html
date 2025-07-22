@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Asistente Virtual - Hotel Golden Way</title>
 
-  <!-- Librerías base -->
+  <!-- Estilos base -->
   <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -27,11 +27,10 @@
       height: 100%;
       max-width: 420px;
       max-height: 720px;
-      border-radius: 22px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       overflow: hidden;
       background-color: #ffffff;
-      transition: all 0.3s ease;
     }
 
     :root {
@@ -44,9 +43,8 @@
       --n8n-chat-font-family: 'Nunito', sans-serif;
     }
 
-    /* Personalización del input */
     .n8n-chat input[type="text"]::placeholder {
-      color: #888;
+      color: #777;
       font-style: italic;
     }
   </style>
@@ -90,6 +88,7 @@
 
       createChat({
         mode: 'fullscreen',
+        language: 'es', // 🔥 Idioma por defecto
         webhookUrl: 'https://parise27.app.n8n.cloud/webhook/474cf90b-255d-431e-b45f-1e98bc44154b/chat',
         showWelcomeScreen: false,
         loadPreviousSession: false,
@@ -104,9 +103,15 @@
         allowedFilesMimeTypes: '',
         i18n: {
           es: {
-            subtitle: "Soy tu asistente 24/7 a tu disposición",
             title: "Bienvenido al Hotel Golden Way",
-            inputPlaceholder: "Escribe tu pregunta..."
+            subtitle: "Soy tu asistente 24/7 a tu disposición",
+            inputPlaceholder: "Escribe tu pregunta...",
+            sendButtonLabel: "Enviar",
+            welcomeScreen: {
+              title: "Bienvenido 👋",
+              subtitle: "¿En qué puedo ayudarte hoy?",
+              buttonText: "Empezar"
+            }
           }
         },
         initialMessages: [
