@@ -20,6 +20,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .logo-container img {
+      max-width: 120px;
+      height: auto;
     }
 
     #n8n-chat {
@@ -46,6 +57,10 @@
 </head>
 
 <body>
+  <div class="logo-container">
+    <img src="InfoStay_sin_texto_fondo_transparente.png" alt="Logo Empresa">
+  </div>
+
   <div id="n8n-chat"></div>
 
   <script type="module">
@@ -110,3 +125,4 @@
   </script>
 </body>
 </html>
+
